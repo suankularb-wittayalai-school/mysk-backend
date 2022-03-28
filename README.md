@@ -7,7 +7,7 @@ This repositary is used as a starting point for mysk backend fastapi services.
 1. Clone the repo
 
 ```powershell
-git clone https://github.com/suankularb-wittayalai-school/mysk-backend.git
+git clone https://github.com/suankularb-wittayalai-school/mysk-backend-fastapi-template.git
 ```
 
 2. Create a virtual environment (optional)
