@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from starlette.middleware.cors import CORSMiddleware
+
+# from starlette.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import uvicorn
 import os
