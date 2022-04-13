@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 import uvicorn
 import os
 
+from mysk_utils.response import InternalCode
+
 load_dotenv()
 
 app = FastAPI()
@@ -11,7 +13,7 @@ app = FastAPI()
 
 @app.get("/")
 def healthCheck():
-    return {"status": True}
+    return {"status": True, "internalCode": InternalCode.IC_GENERIC_SUCCESS}
 
 
 if __name__ == "__main__":
