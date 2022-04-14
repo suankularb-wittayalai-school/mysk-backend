@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response, status
 
 # from starlette.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
@@ -12,9 +12,10 @@ load_dotenv()
 app = FastAPI()
 
 
-@app.get("/")
-def healthCheck():
-    return {"status": True, "internalCode": InternalCode.IC_GENERIC_SUCCESS}
+@app.get("/", status_code=status.HTTP_200_OK)
+def healthCheck(response: Response):
+    response.headers["X-Internal-Code"] = str(InternalCode.IC_GENERIC_SUCCESS.value)
+    return {"status": True}
 
 
 if __name__ == "__main__":
