@@ -15,7 +15,7 @@ app = FastAPI()
 @app.get(
     "/", status_code=status.HTTP_200_OK, response_description="Welcome to MySK API"
 )
-def healthCheck(response: Response):
+def health_check(response: Response):
     response.headers["X-Internal-Code"] = str(InternalCode.IC_GENERIC_SUCCESS.value)
     return {"status": True}
 
